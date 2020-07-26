@@ -1,0 +1,38 @@
+<html>
+    <head>
+           <title>Student's Page</title>
+           <link rel="stylesheet"
+    href="/libs/bootstrap.min.css">
+  <script type="text/javascript"
+    src="/libs/bootstrap.min.js"></script>
+       
+         <link rel="stylesheet" href="../libs/bootstrap.css">
+         <link rel="stylesheet" href="../stylesheets/stylesheet.css">
+         <link rel="stylesheet" href="../libs/dataTables.bootstrap4.min.css">
+       
+         <script src="../libs/jquery.min.js"></script>
+         <script src="../libs/jquery.dataTables.min.js"></script>
+         <script src="../libs/dataTables.bootstrap4.min.js"></script>
+         <script src="../libs/bootstrap.bundle.js"></script>
+    </head>    
+
+    <body>
+        <%- include("partials/studentPageNav") -%>
+        <% if(currentUser) { %>
+        
+            <h3 class="heading text-danger text-center">Your Profile:</h3>
+            </br>
+            <p>Name : <%= currentUser.username %></p>
+            <p>Gender : <%= currentUser.gender %></p>
+            <p>Student ID : Ghc<%= currentUser.studentsId %></p>
+            <p> Class: <%= currentUser.class %></p>
+            <p>Email : Ghc<%= currentUser.email %></p>
+  
+            <% } %>
+  
+      
+           
+        
+        </div>
+    </body>
+</html>
